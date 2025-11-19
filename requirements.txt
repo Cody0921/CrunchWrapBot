@@ -1,0 +1,8 @@
+Flask
+SQLAlchemy
+Flask-SQLAlchemy
+discord.py
+aiohttp
+requests
+python-dotenv
+
