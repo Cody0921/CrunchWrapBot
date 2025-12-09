@@ -28,8 +28,5 @@
 
 ## Notes
 - This is a fake bot prototype and does not process real payments or orders. Play around with it!
+- Remove-Item Env:DISCORD_TOKEN
 
-## Important Link
-https://discord.com/developers/applications
-
-## Reminder to change the .env bot token when presenting.

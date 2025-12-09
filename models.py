@@ -1,5 +1,4 @@
 # models.py
-
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -8,11 +7,11 @@ db = SQLAlchemy()
 class MenuItem(db.Model):
     __tablename__ = 'menu_items'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String, unique=True, nullable=False)
-    category = db.Column(db.String, nullable=False)
-    description = db.Column(db.String, nullable=True)
-    price = db.Column(db.Float, nullable=False, default=0.0)
+    company = db.Column(db.String, nullable=False)
+    name = db.Column(db.String, nullable=False)
     calories = db.Column(db.Integer, nullable=True)
+    price = db.Column(db.Float, default=0.0)
+    category = db.Column(db.String, default="Misc")
 
 class Deal(db.Model):
     __tablename__ = 'deals'
