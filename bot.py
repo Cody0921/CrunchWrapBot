@@ -26,7 +26,7 @@ async def fetch_json(session, method, url, **kwargs):
 @tree.command(name="menu", description="Show menu (optionally provide category)")
 @app_commands.describe(category="Optional category like Tacos, Burritos")
 async def menu(interaction: discord.Interaction, category: str = None):
-    await interaction.response.defer()  # shows "thinking..."
+    await interaction.response.defer() 
     params = {"limit": 8}  # fetch only 8 items by default
     if category:
         params['category'] = category
@@ -181,3 +181,4 @@ if __name__ == "__main__":
         print("Please set DISCORD_TOKEN in the environment.")
         exit(1)
     bot.run(DISCORD_TOKEN)
+
