@@ -25,7 +25,7 @@ def create_app(db_path=None):
             {
                 'id': it.id,
                 'name': it.name,
-                'company': "Taco Bell",  # always Taco Bell
+                'company': "Taco Bell",  
                 'calories': it.calories,
                 'price': it.price,
                 'category': it.category
@@ -42,7 +42,7 @@ def create_app(db_path=None):
         return jsonify({
             'id': it.id,
             'name': it.name,
-            'company': "Taco Bell",  # always Taco Bell
+            'company': "Taco Bell",  
             'calories': it.calories,
             'price': it.price,
             'category': it.category
@@ -143,3 +143,4 @@ def create_app(db_path=None):
 if __name__ == '__main__':
     app = create_app()
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
+
