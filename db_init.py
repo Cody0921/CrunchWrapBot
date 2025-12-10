@@ -46,7 +46,7 @@ def assign_price(category: str) -> float:
     elif category == "sides":
         return round(random.uniform(1.5, 3.5), 2)
     elif category == "drinks":
-        return round(random.uniform(2.0, 3.5), 2)  # realistic Baja Blast price
+        return round(random.uniform(2.0, 3.5), 2)  
     elif category == "desserts":
         return round(random.uniform(1.5, 4.0), 2)
     elif category == "sandwiches":
@@ -70,8 +70,8 @@ def populate_menu():
         added_count = 0
         for item, calories in rows:
             category = assign_category(item)
-            if category == "Drinks" or category != "Drinks":  # include all except drinks without size
-                # Skip drinks that don't meet size requirement
+            if category == "Drinks" or category != "Drinks":  
+                
                 if "drink" in item.lower() and category != "Drinks":
                     continue
                 menu_item = MenuItem(
@@ -99,3 +99,4 @@ def populate_menu():
 
 if __name__ == "__main__":
     populate_menu()
+
